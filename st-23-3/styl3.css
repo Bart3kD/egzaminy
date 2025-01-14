@@ -1,0 +1,51 @@
+* {
+    font-family: Georgia;
+}
+
+header, footer {
+    background-color: #C75B39;
+    color: white;
+    padding: 10px;
+    text-align: center;
+}
+
+section#left {
+    background-color: #FF8A65;
+    width: 25%;
+    height: 500px;
+    padding-top: 50px;
+}
+
+section#right {
+    background-color: snow;
+    width: 75%;
+    height: 500px;
+    text-align: center;
+    padding-top: 50px;
+}
+
+section {
+    float: left;
+}
+
+footer {
+    clear: both;
+}
+
+img {
+    width: 25%;
+    margin: 10px;
+    box-shadow: 15px 15px 10px dimgray;
+}
+
+li {
+    margin: 5px;
+}
+
+li::marker {
+    color: snow;
+}
+
+h3 {
+    margin: 50px 0 50px 0;
+}

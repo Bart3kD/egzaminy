@@ -1,0 +1,7 @@
+SELECT nazwa, ulica FROM kwiaciarnie WHERE miasto LIKE 'Malbork';
+
+SELECT k.id_kwiaciarni, COUNT(z.id_zam) FROM kwiaciarnie k JOIN zamowienia z ON z.id_kwiaciarni = k.id_kwiaciarni;
+
+SELECT k.nazwa, k.miasto, z.kwiaty FROM kwiaciarnie k JOIN zamowienia z WHERE k.id_kwiaciarni = z.id_kwiaciarni AND z.data LIKE 2019-01-07;
+
+CREATE TABLE klienci( id INT NOT NULL AUTO_INCREMENT, imie VARCHAR(15), nazwisko VARCHAR(15), rabat INT, PRIMARY KEY (id) );
