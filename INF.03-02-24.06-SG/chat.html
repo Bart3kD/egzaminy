@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="pl">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Chat</title>
+    <link rel="stylesheet" href="styl.css">
+</head>
+<body>
+    <main>
+        <header>
+            <h2>Chat</h2>
+        </header>
+        <div id="chat">
+            <div class="message jola">
+                <img src="Jolka.jpg" alt="Jolanta Nowak">
+                <p>Cześć idziesz jutro do kina?</p>
+            </div>
+            <div class="message krzysiek">
+                <img src="Krzysiek.jpg" alt="Krzysztof Łukasiński">
+                <p>Tak! A ty?</p>
+            </div>
+        </div>
+        <label for="responseInput">Wpisz wiadomość:</label>
+        <input type="text" id="responseInput">
+        <button onclick="sendMessage()">Wyślij</button>
+        <br>
+        <button onclick="randomMessage()">Generuj losową odpowiedź</button>
+    </main>
+    <aside>
+        <h3>Chaty</h3>
+        <ul>
+            <li>Ogólny</li>
+            <li>Tematyczne</li>
+            <ol>
+                <li>Turystyczny</li>
+                <li>Żeglarski</li>
+                <li>Filatelistyczny</li>
+                <li>Hodowla zwierzątek domowych</li>
+            </ol>
+            <h3>Uczestnicy</h3>
+            <p>Jolanta Nowak</p>
+            <img src="Jolka.jpg" alt="Jolanta Nowak">
+            <p>Krzysztof Łukasiński</p>
+            <img src="Krzysiek.jpg" alt="Krzysztof Łukasiński">
+        </ul>
+    </aside>
+    <footer>
+        <h5>Chat wykonał: 00000000000</h5>
+    </footer>
+    <script>
+        const input = document.querySelector('#responseInput');
+        const chat = document.querySelector('#chat')
+
+        const answers = ["Świetnie!",
+            "Kto gra główną rolę?",
+            "Lubisz filmy Tego reżysera?",
+            "Będę 10 minut wcześniej",
+            "Może kupimy sobie popcorn?",
+            "Ja wolę Colę",
+            "Zaproszę jeszcze Grześka",
+            "Tydzień temu też byłem w kinie na Diunie",
+            "Ja funduję bilety"];
+
+        const sendMessage = () => {
+            let response = input.value;
+
+            let output = "<div class='message jola'>";
+            output += "<img src='Jolka.jpg' alt='Jolanta Nowak'>";
+            output += "<p>" + response + "</p>"
+            output += "</div>"
+
+            chat.innerHTML += output;
+            chat.scrollTop = chat.scrollHeight;
+        };
+
+        const randomMessage = () => {
+            let randomNumber = Math.floor(Math.random() * 9)
+            console.log(randomNumber);
+
+            let output = "<div class='message krzysiek'>";
+            output += "<img src='Krzysiek.jpg' alt='Krzysztof Łukasiński'>";
+            output += "<p>" + answers[randomNumber] + "</p>"
+            output += "</div>"
+
+            chat.innerHTML += output;
+            chat.scrollTop = chat.scrollHeight;
+        };
+    </script>
+</body>
+</html>
