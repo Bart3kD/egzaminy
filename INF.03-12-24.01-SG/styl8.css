@@ -1,0 +1,71 @@
+* {
+    font-family: Garamond;
+}
+
+main {
+    width: 72%;
+    float: left;
+    text-align: center;
+}   
+
+header {
+    background-color: #795548;
+    font-size: 170%;
+    overflow: hidden;
+}
+
+.scdn {
+    height: 400px;
+    background-color: white;
+}
+
+aside {
+    background-color: #BCAAA4;
+    color: #795548;
+    width: 28%;
+    float: left;
+}
+
+aside > div {
+    height: 400px;
+}
+
+footer{
+    background-color: #795548;
+    color: white;
+    padding: 20px;
+    clear: both;
+}
+
+table {
+    margin: auto;
+    width: 80%;
+    border: 1px solid #795548;
+}
+
+td:hover {
+    background-color: sienna;
+    color: white;
+}
+
+td {
+    text-align: center;
+}
+
+h4 {
+    font-size: 200%;
+}
+
+img {
+    padding: 20px;
+    border-radius: 40px;
+}
+
+a {
+    color: white;
+    text-align: center;
+}
+
+input[type=radio] {
+    margin: 7px;
+}

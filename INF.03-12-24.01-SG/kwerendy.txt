@@ -1,0 +1,7 @@
+SELECT imie, nazwisko, stanowisko FROM kadra WHERE stanowisko LIKE 'fryzjer' OR stanowisko LIKE 'stylista';
+
+SELECT COUNT(*) as "ilość usług", MAX(cena) as "najdroższa" from uslugi where rodzaj = 2;
+
+SELECT u.nazwa, k.imie FROM uslugi u JOIN kadra k ON kadra_id = k.id WHERE rodzaj LIKE 'fryzjerskie' OR rodzaj LIKE 'inne';
+
+ALTER TABLE uslugi ADD COLUMN opinia text;

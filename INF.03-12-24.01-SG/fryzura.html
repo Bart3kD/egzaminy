@@ -1,0 +1,109 @@
+<!DOCTYPE html>
+<html lang="pl">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Fryzjerstwo</title>
+    <link rel="stylesheet" href="styl8.css">
+</head>
+<body>
+    <main>
+        <header>
+            <a href="index.html">
+                <h1>SALON FRYZJERSKI</h1>
+            </a>
+        </header>
+        <div class="scdn">
+            <h2>PROMOCJA!</h2>
+            <form action="">
+                <input class="length" type="radio" name="radio" value="short" id="">
+                <label for="">Krótkie</label>
+                <br>
+                <input class="length" type="radio" name="radio" value="medium" id="">
+                <label for="">Średnie</label>
+                <br>
+                <input class="length" type="radio" name="radio" value="halflong" id="">
+                <label for="">Półdługie</label>
+                <br>
+                <input class="length" type="radio" name="radio" value="long" id="">
+                <label for="">Długie</label>
+                <br>
+                <input type="button" value="Odkryj promocję" onclick="getDiscount()" id="">
+                <br>
+                <p id="discount"></p>
+            </form>
+        </div>
+        <div>
+            <p>Witaj! Miło nam, że odwiedziłeś nasz salon. Sprawdź promocje!</p>
+            <h4>Kontakt: 444 555 666</h4>
+        </div>
+    </main>
+    <aside>
+        <div>
+            <a href="fryzura.html">
+                <h4>Ceny strzyżenia</h4>
+            </a>
+            <table>
+                <tr>
+                    <th>Długość włosów</th>
+                    <th>Cena</th>
+                </tr>
+                <tr>
+                    <td>Krótkie</td>
+                    <td>25</td>
+                </tr>
+                <tr>
+                    <td>Średnie</td>
+                    <td>30</td>
+                </tr>
+                <tr>
+                    <td>Półdługie</td>
+                    <td>40</td>
+                </tr>
+                <tr>
+                    <td>Długie</td>
+                    <td>50</td>
+                </tr>
+            </table>
+        </div>
+        <img src="obraz1.jpg" alt="Fryzjerka">
+    </aside>
+    <footer>
+        <p>Autor: 00000000000</p>
+    </footer>
+    <script>
+        const text = document.querySelector('#discount');
+
+        const getDiscount = () => {
+            let lengths = document.querySelectorAll('.length');
+            let length = '';
+
+            lengths.forEach((radio) => {
+                if (radio.checked) {
+                    length = radio.value;
+                }
+            });
+
+            let discount = 0;
+            switch(length) {
+                case "short":
+                    discount = 15;
+                    break;
+                case "medium":
+                    discount = 20;
+                    break;
+                case "halflong":
+                    discount = 30;
+                    break;
+                case "long":
+                    discount = 40;
+                    break;
+                default:
+                    break;
+            }
+
+            text.innerHTML = "cena promocyjna: " + discount;
+        }
+    </script>
+</body>
+</html>
