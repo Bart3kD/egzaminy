@@ -1,0 +1,54 @@
+* {
+    font-family: Helvetica;
+}
+
+header, footer {
+    background-color: saddlebrown;
+    color: white;
+    text-align: center;
+    padding: 7px;
+    clear: both;
+}
+
+section {
+    width: 80%;
+}
+
+nav {
+    background-color: peru;
+    height: 40px;
+    padding-top: 20px;
+}
+
+section > div {
+    height: 700px;
+    font-size: 120%;
+    overflow: auto;
+}
+
+aside {
+    background-color: peru;
+    color: white;
+    width: 20%;
+    height: 760px;
+}
+
+section, aside {
+    float: left;
+}
+
+a {
+    color: #DDD;
+    padding-left: 90px;
+    font-size: 140%;
+    text-decoration: none;
+}
+
+a:hover {
+    color: white;
+}
+
+img {
+    float: left;
+    margin: 30px;
+}
