@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="pl">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Efekt obrazu</title>
+    <link rel="stylesheet" href="styl.css">
+</head>
+<body>
+    <header>
+        <h2>Efekty na obrazach</h2>
+    </header>
+    <main>
+        <section>
+            <img src="pszczola.jpg" alt="pszczoła na fioletowym kwiatku">
+            <form>
+                <label for="blur">Blur</label>
+                <input type="radio" name="efekt" value="blur">
+                <br>
+                <label for="sepia">Sepia</label>
+                <input type="radio" name="efekt" value="sepia(100%)">
+                <br>
+                <label for="negatyw">Negatyw</label>
+                <input type="radio" name="efekt" value="invert(100%)">
+                <br>
+                <button type="button" onclick="useEffect()">Zastosuj</button>
+            </form>
+        </section>
+        <section>
+            <img src="pomarancza.jpg" alt="drzewo pomarańczy">
+            <br>
+            <button type="button" onclick="addColor()">Kolorowy</button>
+            <button type="button" onclick="removeColor()">Czarno-biały</button>
+        </section>
+        <section>
+            <img src="owoce.jpg" alt="Kosz pełen owoców">
+            <br>
+            <input id="przezroczystosc" type="range" min="0" max="100" value="100">
+            <button type="button" onclick="setOpacity()">Zastosuj</button>
+        </section>
+        <section>
+            <img src="zolw.jpg" alt="Żółw w wodzie">
+            <br>
+            <input id="jasnosc" type="range" min="0" max="250" value="125">
+            <button type="button" onclick="setBrigtness()">Zastosuj</button>
+        </section>
+    </main>
+    <footer>
+        <a target="_blank" rel="noopener noreferrer" href="http://www.css.com/">
+            <p>Zobacz inne efekty obrazu</p>
+        </a>
+        <p>Stronę wykonał: 00000000000</p>
+    </footer>
+    <script src="main.js"></script>
+</body>
+</html>
